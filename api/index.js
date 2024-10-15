@@ -14,6 +14,7 @@ const port = 3000;
 app.use(express.json());
 const whitelist = ['http://localhost:8080', 'https://myapp.co']; // dominios permitidos
 const options = {
+  //configuración de cors
   origin: (origin, callback) => {
     if (whitelist.includes(origin) || !origin) {
       callback(null, true);
@@ -24,11 +25,11 @@ const options = {
 };
 app.use(cors(options)); //solo se permiten peticiones de los dominios de la whitelist
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send('Hello server!');
 });
 
-app.get('/about', (req, res) => {
+app.get('/api/about', (req, res) => {
   res.send('About page');
 });
 

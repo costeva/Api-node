@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "test": "nodemon index.js",
-    "start": "nodemon index.js",
+    "dev": "nodemon api/index.js",
+    "test": "nodemon api/index.js",
+    "start": "nodemon api/index.js",
     "lint": "slint"
   },
   "keywords": [],
